@@ -88,6 +88,7 @@ img {
 
 .header_container {
     width: 100%;
+    height: 250px;
     /* height: 10%; */
     background-color: #00273a;
     display: flex;
@@ -116,12 +117,13 @@ img {
 }
 
 .header-contacto {
-    width: 63%;
+    width: 53%;
     margin: 20px;
     display: flex;
     flex-direction: column;
+    align-items: end;
     justify-content: center;
-    align-content: space-between;
+    align-content: space-evently;
 }
 
 .header-item {
