@@ -6,21 +6,20 @@
 
 body {
     border: 3px #00273a solid;
-    min-height: 100px;
+    min-height: 100%;
     background-color: #cce8f1;
     margin: 0px;
 }
 
 
 main {
-    /* border: 3px red solid; */
-    min-height: 200px;
+    min-height: 200%;
     background-color: #cce8f1;
 }
 
 .main_title {
-    padding: 40px;
-    font-size: xx-large;
+    padding: 2%;
+    font-size: xx-large bold;
     font-style: normal;
     color: #00273a;
     display: flex;
@@ -49,6 +48,7 @@ main {
         transform: scale(1)
     }
 }
+
 /* TRAER AL FRENTE ELEMENTOS DEL INDEX (PROPIEDADES DESTACADAS Y NUEVOS INGRESOS) */
 
 @keyframes traerAlFrente {
@@ -63,33 +63,11 @@ main {
     }
 }
 
-/* @keyframes show {
-    from {
-        opacity: 0;
-        scale: 25%;
-    }
-    to {
-        opacity: 1;
-        scale: 100%;
-    }
-}
-
-img {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-
-    animation-timeline: --image;
-    animation-name:show;
-
-    animation-range: entry 25% cover 50%;
-} */
 
 /* ESTILO PARA SECCIÓN HEADER */
 
 .header_container {
     width: 100%;
-    height: 250px;
-    /* height: 10%; */
     background-color: #00273a;
     display: flex;
     flex-direction: row;
@@ -97,38 +75,27 @@ img {
 }
 
 .header-logo {
-    width: 600px;
+    width: 48%;
     margin: 1%;
-    padding: 1%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-/* Brackpoints para aumentar tamaño del logo en "Header" usando un smartphone */
-
-@media only screen and (max-width: 600px) {
-    .header-logo {
-        width: 900px;
-        margin: 1%;
-        padding: 1%;
-    }  
-}
-
 .header-contacto {
-    width: 63%;
-    margin: 20px;
+    width: 48%;
+    margin: 1%;
     display: flex;
     flex-direction: column;
-    /* align-items: end;*/
+    flex-wrap: wrap;
     justify-content: center;
-    align-content: space-evently;
+    align-items: flex-end;
 }
 
 .header-item {
-    font-style: oblique;
-    font-size: medium;
+    font-style: normal;
+    font-size: large;
     color: #cce8f1 ;
     display: flex;
     flex-direction: row;
@@ -136,13 +103,99 @@ img {
     justify-content: flex-end;
 }
 
-/* Brackpoints modificar posición de los items de contacto en "Header" usando un smartphone */
 
-@media only screen and (max-width: 1843px) {
-        .header-item {
-        justify-content: flex-start;
+/* BREAKPOINTS */
+
+/* Brackpoints para aumentar tamaño del logo e info de contacto en "Header" usando un smartphone */
+
+
+@media only screen and (max-width: 1200px) {
+    .header-logo {
+        width: 60%;
+        margin: 1%;
+        padding: 1%;
     }  
-} 
+
+    .header-contacto {
+        width: 38%;
+        align-items: start;
+        margin: 1%;
+        padding: 3%;
+    }  
+
+    .header-item {
+        font-size: large;
+    }
+}
+
+/* Brackpoints para dar formato al  "Header" usando una Tablet */
+
+@media only screen and (max-width: 767px) {
+    .header-logo {
+        width: 70%;
+        margin: 1%;
+        padding: 1%;
+    }  
+
+    .header-contacto {
+        width: 38%;
+        align-items: start;
+        margin: 1%;
+        padding: 3%;
+    }  
+
+    .header-item {
+        font-size: medium;
+    }
+
+    .main_title {
+        padding: 2%;
+        margin: 10%;
+        font-size: medium bold; 
+    }
+}   
+
+/* Brackpoints para dar formato al "Header" usando un smartphone */
+
+@media only screen and (max-width: 360px) {
+    .header-logo {
+        width: 78%;
+        margin: 0%;
+        padding: 1%;
+    }  
+
+    .header-contacto {
+        width: 35%;
+        align-items: start;
+    }  
+
+    .header-item {
+        font-size: small;
+    }
+
+    .main_title {
+        padding top: 20%;
+        margin: 5%;
+        font-size: medium bold; 
+    }
+
+    .main_container {
+        margin-top: 10%;
+        padding-top: 1%;
+    }
+
+}  
+
+/* Brackpoints para cambiar alineación de los items de contacto en "Header" usando un smartphone */
+/* @media only screen and (max-width: 600px) {
+    .header-contacto {
+        align-items: start;
+        margin: 1%;
+        padding: 1%;
+    }  
+
+} */
+
 
 /* ESTILO PARA SECCIÓN FOOTER */
 
@@ -178,7 +231,6 @@ img {
 /* ESTILO PARA HTML "INDEX" */
 
 .main_container {
-    /* border: 6px red solid; */
     width: 90%;
     height: 80%;
     padding: 30px;
@@ -188,19 +240,17 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* flex-flow: row wrap; Atajo de las 2 lineas anteriores */
     align-content: center;
 }
 
 .item-container {
     background-color: #cce8f1;
-    /* border: 6px blue solid; */
     width: 20%;
     height: 30%;
     color: black;
     margin: 20px;
     padding: 10px;
-    font-size: 20px;
+    font-size: 1,5rem;
     text-align: center;
     display: flex;
     flex-wrap: wrap; 
@@ -256,7 +306,6 @@ img {
     justify-content: flex-end;
 }
 
-
 .misionvisionvalores {
     font-weight: 500;
     font-style: italic;
@@ -270,7 +319,6 @@ img {
 .misionvisionvalores::before {
     content: "🔴";
 }
-
 
 /* Brackpoints para HTML "Empresa" */
 
@@ -312,11 +360,9 @@ img {
 }
 
 
-
 /* ESTILO PARA HTML "VENTA" | "ALQUILER"*/
 
 .venta_container {
-    /* border: 6px red solid; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap; 
@@ -327,7 +373,6 @@ img {
 }
 
 .venta-item{
-    /* border: 6px blue solid;  */
     background-color: #cce8f1;
     width: 90%;
     padding: 30px;
@@ -344,7 +389,6 @@ img {
 }
 
 .item-img {
-    /* border: 6px green solid; */
     padding: 10px;
     margin: auto 5%;
     width: 40%;
@@ -371,7 +415,6 @@ img {
     margin: 20px;
 
 }
-
 
 /* ESTILO PARA HTML "EMPRENDIMIENTOS" */
 
@@ -409,21 +452,17 @@ img {
 /* ESTILO PARA HTML "CONTACTO" */
 
 .contacto_container {
-    /* border: 6px black solid; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* flex-flow: row wrap; Atajo de las 2 lineas anteriores */
     align-content: center;
-    /* test */
     background-color: #cce8f1;
     border-radius: 5px;
     max-width: 100%;
 }
 
 .form-img_container {
-    /* border: 6px red solid; */
     padding: 30px;
     width: 20%;
     justify-content: flex-start;
@@ -431,9 +470,9 @@ img {
 }
 
 .form-container {
-    /* border: 6px blue solid; */
     padding: 10px;
     margin: 1px;
     width: 40%;
     justify-content: flex-start;
 }
+
